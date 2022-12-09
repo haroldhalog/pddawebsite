@@ -29,6 +29,9 @@ SECRET_KEY = 'django-insecure-v(!)y2fv58uges^ub#r9n!-oydq=2m%=tv!5b@-x&9lih9^+^t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 ALLOWED_HOSTS = ['*']
 
 
@@ -132,8 +135,6 @@ STATICFILES_DIRS = [
 db_from_env = dj_database_url.config(conn_max_age=500)
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / "media/"
-urlpatterns += static(settings.STATIC_URL, documents_root=settings.STATIC_ROOT)
-urlpatterns += static(settings.MEDIA_URL, documents_root=settings.MEDIA_ROOT)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
