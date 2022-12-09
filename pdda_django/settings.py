@@ -135,7 +135,6 @@ STATICFILES_DIRS = [
 
 #MEDIA
 db_from_env = dj_database_url.config(conn_max_age=500)
-STATIC_
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / "media/"
 STATIFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
