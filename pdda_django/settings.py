@@ -46,7 +46,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'pddaApp.apps.pddaappConfig',
-    'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
 ]
 
