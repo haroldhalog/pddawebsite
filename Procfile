@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn pdda_django.wsgi
+web: gunicorn pdda_django.wsgi --log-file -
