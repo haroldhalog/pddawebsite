@@ -127,9 +127,14 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
+   
 
 ]
-
+SETTINGS_PATH = os.path.normpath(os.path.dirname(__file__))
+# Find templates in the same folder as settings.py.
+TEMPLATE_DIRS = (
+    os.path.join(SETTINGS_PATH, 'templates'),
+)
 #MEDIA
 db_from_env = dj_database_url.config(conn_max_age=500)
 MEDIA_URL = 'media/'
